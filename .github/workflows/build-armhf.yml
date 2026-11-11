@@ -27,8 +27,7 @@ jobs:
           EOF
 
             apt-get update
-            apt-get install -y --no-install-recommends gcc-arm-linux-gnueabihf libc6-dev-armhf-cross libsdl2-dev:armhf make ca-certificates
-
+            apt-get install -y --no-install-recommends gcc-arm-linux-gnueabihf libc6-dev-armhf-cross libsdl2-dev:armhf make ca-certificates file binutils
             arm-linux-gnueabihf-gcc -O2 -Wall -I/usr/include/SDL2 src/main.c -o lastshift -L/usr/lib/arm-linux-gnueabihf -lSDL2 -lm
 
             file lastshift
